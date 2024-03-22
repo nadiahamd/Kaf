@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/kaflogo.png" type="image/x-icon" class="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 4</title>
+</head>
+<body>
+    <div class="filter"></div>
+    <table>
+        <tr>
+            <th>Arabic</th>
+            <th>English</th>
+            <th>Listen</th>
+        </tr>
+        <tr>
+            <td>ينقش / نحت</td>
+            <td>Carve</td>
+            <td><button class="Listen" id="q1"></button>
+                <script>
+                    let q1 = document.getElementById("q1");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Carve.mp3");
+                        audio.play()
+                    }
+                    q1.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>حصن</td>
+            <td>Fort</td>
+            <td><button class="Listen" id="q2"></button>
+                <script>
+                    let q2 = document.getElementById("q2");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Fort.mp3");
+                        audio.play()
+                    }
+                    q2.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>صفقة رابحة</td>
+            <td>Bargain</td>
+            <td><button class="Listen" id="q3"></button>
+                <script>
+                    let q3 = document.getElementById("q3");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Bargain.mp3");
+                        audio.play()
+                    }
+                    q3.addEventListener("click" , playsound);
+                </script>
+            
+            </td>
+        </tr>
+        <tr>
+            <td>شفرة</td>
+            <td>Cipher</td>
+            <td><button class="Listen" id="q4"></button>
+                <script>
+                    let q4 = document.getElementById("q4");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Cipher.mp3");
+                        audio.play()
+                    }
+                    q4.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>حضارة</td>
+            <td>Civilization</td>
+            <td><button class="Listen" id="q5"></button>
+                <script>
+                    let q5 = document.getElementById("q5");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Civilization.mp3");
+                        audio.play()
+                    }
+                    q5.addEventListener("click" , playsound);
+                </script>
+            
+            </td>
+        </tr>
+        <tr>
+            <td>مومياء</td>
+            <td>Mummy</td>
+            <td><button class="Listen" id="q6"></button>
+                <script>
+                    let q6 = document.getElementById("q6");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Mummy.mp3");
+                        audio.play()
+                    }
+                    q6.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>احجار</td>
+            <td>Stones</td>
+            <td><button class="Listen" id="q7"></button>
+                <script>
+                    let q7 = document.getElementById("q7");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Stones.mp3");
+                        audio.play()
+                    }
+                    q7.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>عجائب</td>
+            <td>Wonders</td>
+            <td><button class="Listen" id="q8"></button>
+                <script>
+                    let q8 = document.getElementById("q8");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Wonders.mp3");
+                        audio.play()
+                    }
+                    q8.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>ملكي</td>
+            <td>Royal</td>
+           <td><button class="Listen" id="q9"></button>
+            <script>
+                let q9 = document.getElementById("q9");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit10/Royal.mp3");
+                    audio.play()
+                }
+                q9.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+            <td>اللغة الهيروغليفية</td>
+            <td>Hieroglyphics</td>
+           <td><button class="Listen" id="q10"></button>
+            <script>
+                let q10 = document.getElementById("q10");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit10/Hieroglyphics.mp3");
+                    audio.play()
+                }
+                q10.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+              <td></td>
+               <td> 
+                <br>
+                <a href="/Unit10/StartPlayu10.4.html">
+                <button class="start"> Start Play</button>
+              </td>
+              <td></td>
+    </table>
+
+         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bentham&family=Honk&family=Rubik+Doodle+Shadow&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    background: #191E29;
+}
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: .7;
+}
+table {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 350px;
+    /*background: #01C38D;*/    /*#d5fb00*/
+    text-align: center;
+    color: #fff;
+    border: 1px solid #0e1017;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 12px 12px #0e1017;
+    overflow: hidden;
+}
+th,td {
+    padding: 5px 10px;
+}
+th {
+    background: #01C38D;
+    text-transform: uppercase;
+}
+/*tr:nth-child(odd) {
+    background-color: #fff;
+}*/
+.Listen {
+    width: 30px;
+    height: 30px;
+    background-image: url(/images/listening.png);
+    background-size: 30px;
+    background-position: center;
+    border: 0;
+}
+.Listen:active {
+    transform: scale(0.96);
+}
+td button i {
+    color:#d5fb00;
+    align-items: center;
+}
+.start {
+    color: #d5fb00;
+    padding: 10px 15px ;
+    border-radius: 35px;
+    border: 1;
+    cursor: pointer;
+    font-size: 20px; 
+    font-family: Bentham;
+    width: 160px;
+}
+@media screen and (max-width: 1024px) {
+     table {
+        width: 85%;
+        height: 50%;
+     }
+     .start {
+        width: 120px;
+        font-size: 15px;
+     }
+}  
+
+        </style>
+        <script>
+            document.addEventListener("contextmenu",function(e){
+             e.preventDefault();
+            },false);
+  </script>
+  <script>
+    document.addEventListener("keydown" , function(e){
+      if(e.ctrlKey || e.keyCode==123){
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

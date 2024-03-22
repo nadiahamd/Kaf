@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/kaflogo.png" type="image/x-icon" class="icon">
+    <link rel="stylesheet" href="part1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 1</title>
+</head>
+<body>
+    <div class="filter"></div>
+    <table>
+        <tr>
+            <th>Arabic</th>
+            <th>English</th>
+            <th>Listen</th>
+        </tr>
+        <tr>
+            <td>موقع اثري</td>
+            <td>Heritage</td>
+            <td><button class="Listen" id="p1"></button>
+                <script>
+                    let p1 = document.getElementById("p1");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Heritage.mp3");
+                        audio.play()
+                    }
+                    p1.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>معلم بارز</td>
+            <td>Landmark</td>
+            <td><button class="Listen" id="p2"></button>
+                <script>
+                    let p2 = document.getElementById("p2");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Landmark.mp3");
+                        audio.play()
+                    }
+                    p2.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>تحف</td>
+            <td>Artifacts</td>
+            <td><button class="Listen" id="p3"></button>
+                <script>
+                    let p3 = document.getElementById("p3");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Artifacts.mp3");
+                        audio.play()
+                    }
+                    p3.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>موكب كبير</td>
+            <td>Grand procession</td>
+            <td><button class="Listen" id="p4"></button>
+                <script>
+                    let p4 = document.getElementById("p4");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Grand procession.mp3");
+                        audio.play()
+                    }
+                    p4.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>تعافي / التئام</td>
+            <td>Healing</td>
+            <td><button class="Listen" id="p5"></button>
+                <script>
+                    let p5 = document.getElementById("p5");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit10/Healing.mp3");
+                        audio.play()
+                    }
+                    p5.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>اثر</td>
+            <td>Mounment</td>
+           <td><button class="Listen" id="p6"></button>
+            <script>
+                let p6 = document.getElementById("p6");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit10/Mounment.mp3");
+                    audio.play()
+                }
+                p6.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+        <tr>
+            <td>اسطورة</td>
+            <td>Myth</td>
+           <td><button class="Listen" id="p7"></button>
+            <script>
+                let p7 = document.getElementById("p7");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit10/Myth.mp3");
+                    audio.play()
+                }
+                p7.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+        <tr>
+            <td>رائع</td>
+            <td>Picturesque</td>
+           <td><button class="Listen" id="p8"></button>
+            <script>
+                let p8 = document.getElementById("p8");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit10/Picturesque.mp3");
+                    audio.play()
+                }
+                p8.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+        <tr>
+            <td>مذهل</td>
+            <td>Spectacular</td>
+           <td><button class="Listen" id="p9"></button>
+            <script>
+                let p9 = document.getElementById("p9");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit10/Spectacular.mp3");
+                    audio.play()
+                }
+                p9.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+        <tr>
+            <td>محنط</td>
+            <td>Preserved</td>
+           <td><button class="Listen" id="p10"></button>
+            <script>
+                let p10 = document.getElementById("p10");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit10/Preserved.mp3");
+                    audio.play()
+                }
+                p10.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+              <td></td>
+               <td> 
+                <br>
+                <a href="/Unit10/startplayu10.1.html">
+                <button class="start"> Start Play</button>
+              </td>
+              <td></td>
+    </table>
+        
+
+
+             <script>
+               /* let speech = new SpeechSynthesisUtterance();
+                document.querySelector("button").addEventListener("click", () =>{
+                    speech.text = document.querySelector("td").value;
+                    window.speechSynthesis.speak(speech);
+                });  
+             
+             const td = document.querySelector("td"),
+             button = document.querySelector("button");
+
+             function textToSpeech(text){
+                let utternace = new SpeechSynthesisUtterance(text);
+                speechSynthesis.speak(utternace);
+             }
+             button.addEventListener("click", e => {
+             e.preventDefault();
+             if(td.value !== ""){
+                textToSpeech(td.value);
+             }
+             });   */
+             </script>
+
+             <style>
+                @import url('https://fonts.googleapis.com/css2?family=Bentham&family=Honk&family=Rubik+Doodle+Shadow&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    background: #191E29;
+}
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: .7;
+}
+table {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 350px;
+    /*background: #01C38D;*/    /*#d5fb00*/
+    text-align: center;
+    color: #fff;
+    border: 1px solid #0e1017;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 12px 12px #0e1017;
+    overflow: hidden;
+}
+th,td {
+    padding: 5px 10px;
+}
+th {
+    background: #01C38D;
+    text-transform: uppercase;
+}
+/*tr:nth-child(odd) {
+    background-color: #fff;
+}*/
+.Listen {
+    width: 30px;
+    height: 30px;
+    background-image: url(/images/listening.png);
+    background-size: 30px;
+    background-position: center;
+    border: 0;
+}
+.Listen:active {
+    transform: scale(0.96);
+}
+td button i {
+    color:#d5fb00;
+    align-items: center;
+}
+.start {
+    color: #d5fb00;
+    padding: 10px 15px ;
+    border-radius: 35px;
+    border: 1;
+    cursor: pointer;
+    font-size: 20px; 
+    font-family: Bentham;
+    width: 160px;
+}
+@media screen and (max-width: 1024px) {
+     table {
+        width: 85%;
+        height: 50%;
+     }
+     .start {
+        width: 120px;
+        font-size: 15px;
+     }
+}  
+
+             </style>
+             <script>
+                document.addEventListener("contextmenu",function(e){
+                 e.preventDefault();
+                },false);
+      </script>
+      <script>
+        document.addEventListener("keydown" , function(e){
+          if(e.ctrlKey || e.keyCode==123){
+            e.stopPropagation();
+            e.preventDefault();
+          }
+        });
+      </script>
+</body>
+</html>

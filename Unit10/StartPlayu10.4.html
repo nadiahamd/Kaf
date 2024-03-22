@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/kaflogo.png" type="image/x-icon" class="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srart Play </title>
+</head>
+<body>
+    <div class="app">
+        <h1>Start Play <span>Unit10 P4</span> </h1> 
+        <div class="quiz">
+        <h2 id="question"> Q1 </h2>
+        <div id="answer-buttons">
+            <button class="btn"> answer 1</button>
+            <button class="btn"> answer 2</button>
+            <button class="btn"> answer 3</button>
+        </div>
+        <button id="next-btn"> Next</button>
+    </div>
+    </div>
+   
+
+
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            background: #191E29;
+        }
+
+        .app {
+            background: #fff;
+            width: 90%;
+            max-width: 600px;
+            margin: 100px auto 0;
+            border-radius: 15px;
+            padding: 30px;
+            border-top-left-radius: 50px;
+            
+        }
+
+        span {
+         color: #01C38D;
+        }
+
+        .app h1 {
+            font-size: 25px;
+            color: #001e4d;
+            font-weight: 600;
+            border-bottom: 1px solid #333 ;
+            padding-bottom: 30px;
+        }
+
+        .quiz {
+            padding: 20px 0;
+        }
+
+        .quiz h2 {
+            font-size: 19px;
+            color: #001e4d;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .btn {
+            background: #fff;
+            color: #222;
+            font-weight: 800;
+            font-size: 18px;
+            width: 30%;
+            border: 1px solid #222;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .btn:hover:not([disabled]) {
+            background: #191E29;
+            color: #fff;
+        }
+
+        .btn:disabled {
+            cursor: no-drop;
+        }
+
+        #next-btn {
+            background: #191E29;
+            color: #fff;
+            font-weight: 500;
+            width: 150px;
+            border: 0;
+            padding: 10px;
+            margin: 20px auto 0;
+            border-radius: 4px;
+            cursor: pointer;
+            display: none;
+        }
+        .correct {
+            background: #77f9af;
+        }
+        .inCorrect {
+            background: #ff7d7d;
+        }
+        .score {
+            color: rgb(215, 0, 0);
+        }
+        
+       
+
+        .quiz {
+            padding: 35px 0;
+        }
+
+        .quiz h2 {
+            font-size: 18px;
+            color: #001e4d;
+            font-weight: 600;
+        }
+
+           
+    </style>
+
+    <script>
+       const questions = [
+        {
+            question: " --eroglyphics  <br><br>  اللغة الهيروغليفية ",
+            answers: [
+                {Text: "Hi", correct:true },
+                {Text: " Ec", correct: false},
+                {Text: "St", correct: false},
+            ]
+        },
+        {
+            question: " Ro--l <br><br> ملكي ",
+            answers: [
+                {Text: "ce", correct: false},
+                {Text: "ki", correct: false},
+                {Text: "ya", correct: true},
+            ]
+        },
+        {
+            question: " W--ders <br><br> عجائب ",
+            answers: [
+                {Text: "nu", correct: false},
+                {Text: "on", correct: true},
+                {Text: "mi", correct: false},
+            ]
+        },
+        {
+            question: " Ston-- <br><br>  احجار  ",
+            answers: [
+                {Text: "es", correct: true},
+                {Text: "ib", correct: false},
+                {Text: "ip", correct: false},
+            ]
+        },
+        {
+            question: " --mmy <br><br>  مومياء",
+            answers: [
+                {Text: "le", correct: false},
+                {Text: "Nn", correct: false},
+                {Text: "Mu", correct: true},
+            ]
+        },
+        {
+            question: " Ci--lization <br><br>  حضارة  ",
+            answers: [
+                {Text: "vi", correct:true },
+                {Text: "ar", correct: false},
+                {Text: "ir", correct: false},
+            ]
+        },
+        {
+            question: " Ci--er <br><br>  شفرة ",
+            answers: [
+                {Text: "ie", correct: false},
+                {Text: "ph", correct: false},
+                {Text: "ve", correct: true},
+            ]
+        },
+        {
+            question: " Bar--in <br><br>   صفقة رابحة",
+            answers: [
+                {Text: "on", correct: false},
+                {Text: "ga", correct: true },
+                {Text: "in", correct:false},
+            ]
+        },
+        {
+            question: " F--t <br><br>  حصن",
+            answers: [
+                {Text: "ou", correct: false},
+                {Text: "te", correct: false},
+                {Text: "or ", correct: true},
+            ]
+        },
+        {
+            question: " Ca--e  <br><br>   ينقش / نحت " ,
+            answers: [
+                {Text: "rv", correct: true},
+                {Text: "bl", correct: false},
+                {Text: "qo", correct: false},
+            ]
+        },
+       ];
+
+       const questionElement = document.getElementById("question");
+       const answerButtons = document.getElementById("answer-buttons");
+       const nextButton = document.getElementById("next-btn");
+       
+       
+
+       let currentQuestionIndex = 0;
+       let score = 0;
+       function startQuiz(){
+        currentQuestionIndex = 0;
+        score = 0;
+        nextButton.innerHTML = "Next";
+        showQuestion();
+       }
+       function showQuestion(){
+        resetState();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNo + "." + currentQuestion.question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button =document.createElement("button");
+            button.innerHTML = answer.Text;
+            button.classList.add("btn");
+            answerButtons.appendChild(button);
+            if(answer.correct){
+                button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+        });
+       }
+
+      function resetState(){
+        nextButton.style.display = "none";
+        while(answerButtons.firstChild){
+            answerButtons.removeChild(answerButtons.firstChild);
+        }
+      }
+
+      function selectAnswer(e){
+         const selectedBtn = e.target;
+         const isCorrect = selectedBtn.dataset.correct === "true";
+         if (isCorrect){
+            selectedBtn.classList.add("correct");
+            score++;
+         }else{
+            selectedBtn.classList.add("inCorrect");
+         }
+         Array.from(answerButtons.children).forEach(button => {
+           if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+           }
+           button.disabled = true;
+         });
+         nextButton.style.display = "block";
+      }
+      
+    function showScore(){
+        
+        resetState();
+        questionElement.innerHTML = ` Your Score:  ${ score }  out of ${ questions.length }`; 
+        nextButton.innerHTML = "Back";
+        nextButton.style.display = "block";
+             if(score === 12){
+                alert("برافو قد الدنيا ممتاز");
+             }
+            else if(score === 11){
+                alert("برافو قد الدنيا ممتاز");
+             }
+             else if(score === 10){
+                alert("برافو قد الدنيا ممتاز");
+             }
+            else if(score === 9){
+                alert("عاش يا بطل");
+             }
+             else if(score === 8){
+                alert("عاش يا بطل");
+             }
+             else if(score === 7){
+                alert("عاش يا بطل");
+             }
+             else if(score === 6){
+                alert("عاش يا بطل");
+             }
+            else if(score === 5){
+                alert("لا شد حيلك مينفعش كدة");
+             }
+             else if(score === 4){
+                alert("لا شد حيلك مينفعش كدة");
+             }
+            
+            else if(score === 3){
+                alert("مش هتكلم انت الكلام معاك ملهوش لازمة");
+             }
+              
+            else if(score === 2){
+                alert("مش هتكلم انت الكلام معاك ملهوش لازمة");
+             }
+            
+            else if(score === 1){
+                alert("مش هتكلم انت الكلام معاك ملهوش لازمة");
+             }
+
+            else if(score === 0){
+                alert("مش هتكلم انت الكلام معاك ملهوش لازمة");
+             }
+    }
+    
+ 
+       function  handleNextButton(){
+        currentQuestionIndex++;
+        if(currentQuestionIndex < questions.length){
+            showQuestion();
+        }else{
+            showScore();
+        }
+       }
+
+
+       nextButton.addEventListener("click", ()=>{
+          if(currentQuestionIndex < questions.length){
+            handleNextButton();
+          }else{
+            open("/Unit1/HomeUnit1.html");
+          }
+       });
+
+       startQuiz();
+    </script>
+    <script>
+        document.addEventListener("contextmenu",function(e){
+         e.preventDefault();
+        },false);
+</script>
+<script>
+    document.addEventListener("keydown" , function(e){
+      if(e.ctrlKey || e.keyCode==123){
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

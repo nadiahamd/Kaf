@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/kaflogo.png" type="image/x-icon" class="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2</title>
+</head>
+<body>
+    <div class="filter"></div>
+    <table>
+        <tr>
+            <th>Arabic</th>
+            <th>English</th>
+            <th>Listen</th>
+        </tr>
+        <tr>
+            <td>مسلي</td>
+            <td>Entertaining</td>
+            <td><button class="Listen" id="i1"></button>
+                <script>
+                    let i1 = document.getElementById("i1");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Entertaining.mp3");
+                        audio.play()
+                    }
+                    i1.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>ابدي</td>
+            <td>Eternal</td>
+            <td><button class="Listen" id="i2"></button>
+                <script>
+                    let i2 = document.getElementById("i2");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Eternal.mp3");
+                        audio.play()
+                    }
+                    i2.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>متضجر</td>
+            <td>Fed up</td>
+            <td><button class="Listen" id="i3"></button>
+                <script>
+                    let i3 = document.getElementById("i3");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Fed up.mp3");
+                        audio.play()
+                    }
+                    i3.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>مفهوم</td>
+            <td>Perspective</td>
+            <td><button class="Listen" id="i4"></button>
+                <script>
+                    let i4 = document.getElementById("i4");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Perspective.mp3");
+                        audio.play()
+                    }
+                    i4.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>مؤدب</td>
+            <td>Polite</td>
+            <td><button class="Listen" id="i5"></button>
+                <script>
+                    let i5 = document.getElementById("i5");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Polite.mp3");
+                        audio.play()
+                    }
+                    i5.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>شامل</td>
+            <td>Universal</td>
+            <td><button class="Listen" id="i6"></button>
+                <script>
+                    let i6 = document.getElementById("i6");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Universal.mp3");
+                        audio.play()
+                    }
+                    i6.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>درع</td>
+            <td>Armour</td>
+            <td><button class="Listen" id="i7"></button>
+                <script>
+                    let i7 = document.getElementById("i7");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Armour.mp3");
+                        audio.play()
+                    }
+                    i7.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>يتصرف</td>
+            <td>behave</td>
+            <td><button class="Listen" id="i8"></button>
+                <script>
+                    let i8 = document.getElementById("i8");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/behave.mp3");
+                        audio.play()
+                    }
+                    i8.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>محبوب</td>
+            <td>beloved</td>
+           <td><button class="Listen" id="i9"></button>
+            <script>
+                let i9 = document.getElementById("i9");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit12/beloved.mp3");
+                    audio.play()
+                }
+                i9.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+            <td>راوي</td>
+            <td>Storyteller</td>
+           <td><button class="Listen" id="i10"></button>
+            <script>
+                let i10 = document.getElementById("i10");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit12/Storyteller.mp3");
+                    audio.play()
+                }
+                i10.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+              <td></td>
+               <td> 
+                <br>
+                <a href="/Unit12/startplayu12.2.html">
+                <button class="start"> Start Play</button>
+              </td>
+              <td></td>
+    </table>
+
+         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bentham&family=Honk&family=Rubik+Doodle+Shadow&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    background: #191E29;
+}
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: .7;
+}
+table {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 350px;
+    /*background: #01C38D;*/    /*#d5fb00*/
+    text-align: center;
+    color: #fff;
+    border: 1px solid #0e1017;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 12px 12px #0e1017;
+    overflow: hidden;
+}
+th,td {
+    padding: 5px 10px;
+}
+th {
+    background: #01C38D;
+    text-transform: uppercase;
+}
+/*tr:nth-child(odd) {
+    background-color: #fff;
+}*/
+.Listen {
+    width: 30px;
+    height: 30px;
+    background-image: url(/images/listening.png);
+    background-size: 30px;
+    background-position: center;
+    border: 0;
+}
+.Listen:active {
+    transform: scale(0.96);
+}
+td button i {
+    color:#d5fb00;
+    align-items: center;
+}
+.start {
+    color: #d5fb00;
+    padding: 10px 15px ;
+    border-radius: 35px;
+    border: 1;
+    cursor: pointer;
+    font-size: 20px; 
+    font-family: Bentham;
+    width: 160px;
+}
+@media screen and (max-width: 1024px) {
+     table {
+        width: 85%;
+        height: 50%;
+     }
+     .start {
+        width: 120px;
+        font-size: 15px;
+     }
+}  
+
+        </style>
+        <script>
+            document.addEventListener("contextmenu",function(e){
+             e.preventDefault();
+            },false);
+  </script>
+  <script>
+    document.addEventListener("keydown" , function(e){
+      if(e.ctrlKey || e.keyCode==123){
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/kaflogo.png" type="image/x-icon" class="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مش مشترك</title>
+</head>
+<body>
+   <section class="timeline-area">
+    <div class="oooo">
+       <h2>خليني اقولك ايه اللي هتستفاده لما تشترك وتكون جزء من كاف</h2>
+    </div>
+    <div class="oooo">
+       <h2>فتح جميع الوحدات<br> 3 , 4 ,5 ,6 ,7,8 ,9 ,10 ,11 ,12</h2>
+     </div>
+     <div class="oooo">
+        <h2>اليونت متقسمة علي اربع اجزاء</h2>
+      </div>
+      <div class="oooo">
+        <h2>تقدر تسمع نطق الكلمات</h2>
+      </div>
+      <div class="oooo">
+        <h2>واكيد هتختبر نفسك بعد كل جزء من اليونت</h2>
+      </div>
+      <div class="oooo">
+        <h2>تقدر تنضم لجروب التلجرام بنزل حاجات هتساعدك تلم الانجليزي</h2>
+      </div>
+      <div class="oooo">
+        <h2>عجبتك الفكرة خليني اقولك ان قيمة الاشتراك <span> 60جنيه </span></h2>
+      </div>
+      <div class="oooo">
+        <h2> يعني اليونت الواحد ب<span class="ccc">6 جنيه</span> </h2>
+      </div>
+      <div class="oooo">
+        <h2> للتواصل و الاشتراك ياريت تنورنا في اي مكان تحبه </h2>
+      </div>
+      <div id="social-links">
+           <a href="https://t.me/Your_Friend_Kaf"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+           <a href="https://www.facebook.com/profile.php?id=100088690635213&mibextid=ZbWKwL"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+           <a href="https://wa.me/201226193786"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+   </section>
+
+
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lalezar", system-ui;
+    font-weight: 200;
+   }
+   body {
+    background: #191E29;
+   }
+   .timeline-area {
+    margin: 90px auto;
+    width: 360px;
+    border-left: 2px solid #ffffff;
+    padding: 0 20px 0 30px;
+   }
+   div {
+    background-color: #ffffff;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    line-height: 1.7;
+    position: relative;
+    height: 110px;
+    margin-bottom: 20px;
+   }
+   div::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(253, 79, 15);
+    border: 3px solid #ffffff;
+    position: absolute;
+    top: 10px;
+    left: -40px;
+   }
+   div::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #ffffff transparent transparent;
+    border-width: 8px;
+    position: absolute;
+    left: -17px;
+    top: 10px;
+   }
+   .oooo {
+    color: rgb(253, 79, 15);
+   }
+   span {
+    font-size: 35px;
+    font-weight: 200;
+    color: rgb(0, 115, 255);
+   }
+   .ccc {
+    color: #0c5b3d;
+   }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+background: rgb(253, 79, 15);
+border-radius: 15px;
+}
+
+#social-links {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+#social-links a {
+  width:50px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 0 5px 5px #e5e5e5;
+  margin: 0 15px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+#social-links a .fa {
+  font-size: 30px;
+  line-height: 50px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+}
+#social-links a::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: linear-gradient(-45deg , #ed1c94 , #ffec17);
+  position: absolute;
+  transition: 0.5s;
+}
+#social-links a:hover::after {
+  top: 0;
+}
+#social-links a:hover .fa {
+  color: #ffffff;
+}
+#social-links a:hover {
+  transform: translateY(-10px);
+}
+
+
+
+    </style>
+    <script>
+      document.addEventListener("contextmenu",function(e){
+       e.preventDefault();
+      },false);
+</script>
+<script>
+  document.addEventListener("keydown" , function(e){
+    if(e.ctrlKey || e.keyCode==123){
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  });
+</script>
+</body>
+</html>

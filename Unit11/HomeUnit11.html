@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/kaflogo.png" type="image/x-icon" class="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 11</title>
+</head>
+<body>
+    <div class="containr">
+        <div>
+            <a href="/Unit11/part1.html">
+            <button type="button">Part <span>1</span></button>
+        </div>
+        <div>
+            <a href="/Unit11/part2.html">
+            <button type="button">Part <span>2</span></button>
+        </div>
+        <div>
+            <a href="/Unit11/part3.html">
+            <button type="button">Part <span>3</span></button>
+        </div>
+        <div>
+            <a href="/Unit11/part4.html">
+            <button type="button">Part <span>4</span></button>
+        </div>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bentham&family=Honk&family=Rubik+Doodle+Shadow&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Bentham;
+    background: #191E29;
+}
+.containr {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+button {
+    font-size: 32px;
+    font-weight: 500;
+    padding: 20px;
+    margin: 30px; 
+    width: 350px;
+    background: #191E29;
+    cursor: pointer;
+    border: none;
+    color: aliceblue;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px -1px #1f2634, -10px -10px 10px -1px #0b0e13;
+    transition: transform 0.2s ease;
+
+}
+button:active {
+    transform: scale(0.96);
+}
+                       /*button:hover {
+                           background: #59698b;
+                        }*/
+
+span {
+color: #F4B5AB;
+font-size: 40px bold;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-decoration: overline; 
+}     
+@media screen and (max-width: 1024px) {
+    button{
+        width: 300px;
+        align-items: center;
+    }
+} 
+        </style>
+        <script>
+            document.addEventListener("contextmenu",function(e){
+             e.preventDefault();
+            },false);
+  </script>
+  <script>
+    document.addEventListener("keydown" , function(e){
+      if(e.ctrlKey || e.keyCode==123){
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

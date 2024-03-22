@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/kaflogo.png" type="image/x-icon" class="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 4</title>
+</head>
+<body>
+    <div class="filter"></div>
+    <table>
+        <tr>
+            <th>Arabic</th>
+            <th>English</th>
+            <th>Listen</th>
+        </tr>
+        <tr>
+            <td>يتبرع</td>
+            <td>Donate</td>
+            <td><button class="Listen" id="r1"></button>
+                <script>
+                    let r1 = document.getElementById("r1");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Donate.mp3");
+                        audio.play()
+                    }
+                    r1.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>تنين</td>
+            <td>Dragon</td>
+            <td><button class="Listen" id="r2"></button>
+                <script>
+                    let r2 = document.getElementById("r2");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Dragon.mp3");
+                        audio.play()
+                    }
+                    r2.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>حالة طوارئ</td>
+            <td>Emergency</td>
+            <td><button class="Listen" id="r3"></button>
+                <script>
+                    let r3 = document.getElementById("r3");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Emergency.mp3");
+                        audio.play()
+                    }
+                    r3.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>وحش</td>
+            <td>Monster</td>
+            <td><button class="Listen" id="r4"></button>
+                <script>
+                    let r4 = document.getElementById("r4");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Monster.mp3");
+                        audio.play()
+                    }
+                    r4.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>مقدس</td>
+            <td>Holy</td>
+            <td><button class="Listen" id="r5"></button>
+                <script>
+                    let r5 = document.getElementById("r5");
+                    function playsound (){
+                        let audio = new Audio("/Sound/Unit12/Holy.mp3");
+                        audio.play()
+                    }
+                    r5.addEventListener("click" , playsound);
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>اسطوري</td>
+            <td>Legendary</td>
+           <td><button class="Listen" id="r6"></button>
+            <script>
+                let r6 = document.getElementById("r6");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit12/Legendary.mp3");
+                    audio.play()
+                }
+                r6.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+            <td>متاعب</td>
+            <td>Troubles</td>
+           <td><button class="Listen" id="r7"></button>
+            <script>
+                let r7 = document.getElementById("r7");
+                function playsound (){
+                    let audio = new Audio("/Sound/Unit12/Troubles.mp3");
+                    audio.play()
+                }
+                r7.addEventListener("click" , playsound);
+            </script>
+        </td>
+        </tr>
+              <td></td>
+               <td> 
+                <br>
+                <a href="/Unit12/StartPlayu12.4.html">
+                <button class="start"> Start Play</button>
+              </td>
+              <td></td>
+    </table>
+
+         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bentham&family=Honk&family=Rubik+Doodle+Shadow&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    background: #191E29;
+}
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: .7;
+}
+table {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 350px;
+    /*background: #01C38D;*/    /*#d5fb00*/
+    text-align: center;
+    color: #fff;
+    border: 1px solid #0e1017;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 12px 12px #0e1017;
+    overflow: hidden;
+}
+th,td {
+    padding: 10px 15px;
+}
+th {
+    background: #01C38D;
+    text-transform: uppercase;
+}
+/*tr:nth-child(odd) {
+    background-color: #fff;
+}*/
+.Listen {
+    width: 30px;
+    height: 30px;
+    background-image: url(/images/listening.png);
+    background-size: 30px;
+    background-position: center;
+    border: 0;
+}
+.Listen:active {
+    transform: scale(0.96);
+}
+td button i {
+    color:#d5fb00;
+    align-items: center;
+}
+.start {
+    color: #d5fb00;
+    padding: 13px 20px ;
+    border-radius: 35px;
+    border: 1;
+    cursor: pointer;
+    font-size: 20px; 
+    font-family: Bentham;
+    width: 160px;
+}
+@media screen and (max-width: 1024px) {
+     table {
+        width: 85%;
+        height: 50%;
+     }
+     .start {
+        width: 120px;
+        font-size: 15px;
+     }
+}  
+
+        </style>
+        <script>
+            document.addEventListener("contextmenu",function(e){
+             e.preventDefault();
+            },false);
+  </script>
+  <script>
+    document.addEventListener("keydown" , function(e){
+      if(e.ctrlKey || e.keyCode==123){
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

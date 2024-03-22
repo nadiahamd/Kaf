@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Lalezar", system-ui;
+}
+.wrapper {
+    height: 100%;
+    width: 100%;
+    background:#191E29;
+    position: absolute;
+    overflow: hidden;
+  }
+  .wrapper div {
+    height: 60px;
+    width: 60px;
+    border: 2px solid #01C38D;
+    border-radius: 10px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+  }
+  .wrapper div:nth-child(1) {
+    top: 90%;
+    left: 25%;
+    animation: animate 6s linear infinite;
+
+  }
+  .wrapper div:nth-child(2) {
+    top: 60%;
+    left: 90%;
+    animation: animate 10s linear infinite;
+  }
+  .wrapper div:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    animation: animate 6s linear infinite;
+  }
+  .wrapper div:nth-child(4) {
+    top: 66%;
+    left: 30%;
+    animation: animate 7s linear infinite;
+  }
+  .wrapper div:nth-child(5) {
+    top: 90%;
+    left: 98%;
+    animation: animate 9s linear infinite;
+  }
+  .wrapper div:nth-child(6) {
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+  }
+  .wrapper div:nth-child(7) {
+    top: 75%;
+    left: 1%;
+    animation: animate 5s linear infinite;
+  }
+  .wrapper div:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+  .wrapper div:nth-child(9) {
+    top: 90%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+  }
+  .wrapper div:nth-child(10) {
+    top: 45%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+  }
+  .wrapper div:nth-child(11) {
+    top: 10%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+  }
+  .wrapper div:nth-child(12) {
+    top: 20%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+  }
+  .wrapper div:nth-child(13) {
+    top: 15%;
+    left: 10%;
+    animation: animate 8s linear infinite;
+  }
+  .wrapper div:nth-child(14) {
+    top: 99%;
+    left: 5%;
+    animation: animate 10s linear infinite;
+  }
+  .wrapper div:nth-child(15) {
+    top: 90%;
+    left: 80%;
+    animation: animate 9s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100% {
+      transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+  }
+  .welcome {
+    position: relative;
+    text-align: center;
+    top: 250px;
+  }
+  .welcome h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Bentham;
+    color: #ffffff;
+  }
+  .kafName{
+    font-size: 50px;
+    color: #d5fb00;
+    text-decoration:underline;
+    font-family:Bentham;
+  }
+  button{
+    box-shadow: 0 0 5px #01C38D, 0 0 25px #01C38D; 
+    height: 50px;
+    width: 150px;
+    font-size: 30px;
+    font-family:Bentham;
+    font-style: italic;
+    color: #01c38d;;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: auto;
+    display: block;
+    border-radius: 25px;
+  }
+  .but {
+    position: relative;
+    top: 300px;
+  }
+  a{
+    text-decoration: none;
+  }
